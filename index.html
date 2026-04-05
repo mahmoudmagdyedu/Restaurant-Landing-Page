@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flavor Hub — Restaurant</title>
+  <meta name="description" content="Flavor Hub — A modern restaurant landing page showcasing our menu, story, and reservation system." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50:  '#fdf8f0',
+              100: '#f9ecda',
+              200: '#f2d5b0',
+              300: '#e9b97c',
+              400: '#df9a4a',
+              500: '#d4802a',
+              600: '#b86420',
+              700: '#96491c',
+              800: '#7b3c1e',
+              900: '#66331b',
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-body bg-white text-gray-800">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <a href="#" class="font-display text-2xl font-bold text-brand-700">Flavor<span class="text-brand-500">Hub</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        <a href="#about" class="hover:text-brand-600 transition">About</a>
+        <a href="#menu" class="hover:text-brand-600 transition">Menu</a>
+        <a href="#testimonials" class="hover:text-brand-600 transition">Reviews</a>
+        <a href="#reservation" class="bg-brand-600 text-white px-5 py-2 rounded-full hover:bg-brand-700 transition">Reserve</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-gray-700" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="flex flex-col px-6 py-4 gap-4 text-sm font-medium text-gray-600">
+        <a href="#about" class="hover:text-brand-600">About</a>
+        <a href="#menu" class="hover:text-brand-600">Menu</a>
+        <a href="#testimonials" class="hover:text-brand-600">Reviews</a>
+        <a href="#reservation" class="bg-brand-600 text-white px-5 py-2 rounded-full text-center hover:bg-brand-700">Reserve</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="relative min-h-screen flex items-center justify-center text-white">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative text-center px-4 max-w-3xl">
+      <p class="uppercase tracking-[0.3em] text-brand-300 text-sm mb-4">Welcome to</p>
+      <h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight">Flavor Hub</h1>
+      <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-xl mx-auto">A culinary experience where every dish tells a story. Fresh ingredients, bold flavors, unforgettable moments.</p>
+      <a href="#reservation" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-full transition shadow-lg shadow-brand-600/30 text-lg">Reserve a Table</a>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="uppercase tracking-widest text-brand-500 text-sm font-semibold mb-2">Our Story</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Crafted with Passion Since 2015</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">Flavor Hub was born from a simple belief: food should be an experience, not just a meal. Our chefs combine traditional techniques with modern creativity to bring you dishes that delight every sense.</p>
+        <p class="text-gray-600 leading-relaxed">From hand-picked ingredients to carefully curated flavors, every plate that leaves our kitchen carries a piece of our heart.</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-xl">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Restaurant interior" class="w-full h-80 object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section id="menu" class="py-20 sm:py-28 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <p class="uppercase tracking-widest text-brand-500 text-sm font-semibold mb-2">Our Menu</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900">Chef's Specials</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+          <div class="overflow-hidden"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Grilled Salmon" class="w-full h-52 object-cover group-hover:scale-105 transition duration-500" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-bold">Grilled Salmon</h3><span class="text-brand-600 font-bold">$24</span></div>
+            <p class="text-gray-500 text-sm">Atlantic salmon with lemon butter sauce, asparagus, and roasted potatoes.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+          <div class="overflow-hidden"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Margherita Pizza" class="w-full h-52 object-cover group-hover:scale-105 transition duration-500" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-bold">Margherita Pizza</h3><span class="text-brand-600 font-bold">$16</span></div>
+            <p class="text-gray-500 text-sm">Wood-fired pizza with San Marzano tomatoes, fresh mozzarella, and basil.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+          <div class="overflow-hidden"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Caesar Salad" class="w-full h-52 object-cover group-hover:scale-105 transition duration-500" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-bold">Caesar Salad</h3><span class="text-brand-600 font-bold">$12</span></div>
+            <p class="text-gray-500 text-sm">Crisp romaine, parmesan, croutons, and our house-made caesar dressing.</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+          <div class="overflow-hidden"><img src="https://images.unsplash.com/photo-1603073163308-9654c3fb70b5?w=600&q=80" alt="Wagyu Steak" class="w-full h-52 object-cover group-hover:scale-105 transition duration-500" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-bold">Wagyu Steak</h3><span class="text-brand-600 font-bold">$42</span></div>
+            <p class="text-gray-500 text-sm">Premium A5 wagyu, truffle mashed potatoes, and red wine reduction.</p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+          <div class="overflow-hidden"><img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80" alt="Pasta Carbonara" class="w-full h-52 object-cover group-hover:scale-105 transition duration-500" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-bold">Pasta Carbonara</h3><span class="text-brand-600 font-bold">$18</span></div>
+            <p class="text-gray-500 text-sm">Classic Italian carbonara with pancetta, egg yolk, pecorino, and black pepper.</p>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+          <div class="overflow-hidden"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Crème Brûlée" class="w-full h-52 object-cover group-hover:scale-105 transition duration-500" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-bold">Crème Brûlée</h3><span class="text-brand-600 font-bold">$10</span></div>
+            <p class="text-gray-500 text-sm">Classic French vanilla custard with a perfectly caramelized sugar crust.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <p class="uppercase tracking-widest text-brand-500 text-sm font-semibold mb-2">Testimonials</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900">What Our Guests Say</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+          <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+          <p class="text-gray-600 mb-4 italic">"The best dining experience I've ever had! The wagyu steak was absolutely phenomenal. Will definitely come back."</p>
+          <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center font-bold text-brand-700">S</div><div><p class="font-semibold text-sm">Sarah Johnson</p><p class="text-xs text-gray-400">Food Blogger</p></div></div>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+          <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+          <p class="text-gray-600 mb-4 italic">"Amazing atmosphere and incredible food. The carbonara was the best I've had outside of Italy. Highly recommend!"</p>
+          <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center font-bold text-brand-700">M</div><div><p class="font-semibold text-sm">Michael Chen</p><p class="text-xs text-gray-400">Regular Customer</p></div></div>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100">
+          <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+          <p class="text-gray-600 mb-4 italic">"Perfect for date night! The ambiance is wonderful and the crème brûlée is to die for. A hidden gem in the city."</p>
+          <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center font-bold text-brand-700">E</div><div><p class="font-semibold text-sm">Emily Rodriguez</p><p class="text-xs text-gray-400">Verified Diner</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVATION ===== -->
+  <section id="reservation" class="py-20 sm:py-28 bg-gray-900 text-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <p class="uppercase tracking-widest text-brand-400 text-sm font-semibold mb-2">Book a Table</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold">Make a Reservation</h2>
+      </div>
+      <form class="grid sm:grid-cols-2 gap-5">
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm text-gray-300">Full Name</label>
+          <input type="text" placeholder="John Doe" required class="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition" />
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm text-gray-300">Email</label>
+          <input type="email" placeholder="john@email.com" required class="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition" />
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm text-gray-300">Date</label>
+          <input type="date" required class="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition" />
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm text-gray-300">Time</label>
+          <input type="time" required class="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition" />
+        </div>
+        <div class="flex flex-col gap-1.5 sm:col-span-2">
+          <label class="text-sm text-gray-300">Number of Guests</label>
+          <select required class="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition">
+            <option value="">Select guests</option>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3 People</option>
+            <option>4 People</option>
+            <option>5+ People</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-full transition shadow-lg shadow-brand-600/20 text-lg">Confirm Reservation</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-950 text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-display text-xl font-bold text-white mb-3">Flavor<span class="text-brand-500">Hub</span></h3>
+          <p class="text-sm leading-relaxed">A culinary experience where every dish tells a story.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm"><li><a href="#about" class="hover:text-white transition">About</a></li><li><a href="#menu" class="hover:text-white transition">Menu</a></li><li><a href="#testimonials" class="hover:text-white transition">Reviews</a></li><li><a href="#reservation" class="hover:text-white transition">Reservation</a></li></ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-3">Contact</h4>
+          <ul class="space-y-2 text-sm"><li>📍 123 Flavor Street, Food City</li><li>📞 +1 (555) 123-4567</li><li>✉️ hello@flavorhub.com</li></ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-sm">© 2026 Flavor Hub. All rights reserved. Built by <a href="https://github.com/mahmoudmagdyedu" class="text-brand-500 hover:text-brand-400">Mahmoud Magdy</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { t.scrollIntoView({ behavior: 'smooth' }); menu.classList.add('hidden'); }
+      });
+    });
+  </script>
+</body>
+</html>
